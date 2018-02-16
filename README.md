@@ -42,3 +42,6 @@ To Run project simply git clone https://github.com/johnsoneyo/data-generator-plu
 
 ```
 the next 200,000 will be configured as start = 100001,and variance =2 , i.e
+
+- After that run mvn-spring-boot:run to start application , browse to http://localhost:8080/ 
+- Have fun uploading :smile:
