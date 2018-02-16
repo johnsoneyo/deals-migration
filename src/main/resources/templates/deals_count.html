@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel = "stylesheet" 
+              href = "https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"></link>
+        <script src = "https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js">
+        </script>
+        <link rel = "stylesheet" 
+              href = "https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+
+        <style> 
+            .graybox {
+                background-color:#ddd;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class = "mdl-layout__header">
+                <div class = "mdl-layout__header-row">      
+                    <span class = "mdl-layout-title">Deal Migration Tool</span>          
+                </div>       
+            </header>
+
+            <div class = "mdl-layout__drawer">
+                <span class = "mdl-layout-title">Deal Upload User </span>
+                <nav class = "mdl-navigation">
+                    <a class = "mdl-navigation__link" href = "home">Upload File</a>
+                    <a class = "mdl-navigation__link" href = "viewdeals">Query File</a>  
+                    <a class = "mdl-navigation__link" href = "dealcount"> Deals Count</a> 
+                    <a class = "mdl-navigation__link" href = "deals"> Deals</a> 
+                </nav>
+            </div>
+
+            <main class = "mdl-layout__content">    
+
+
+                <div class = "mdl-grid">
+                    <div class = "mdl-cell mdl-cell--2-col "></div>
+                    <div class = "mdl-cell mdl-cell--8-col ">
+
+                        <table style="width: 100% !important; margin-top: 50px"  class="mdl-data-table mdl-cell--12-col mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                            <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">ISO Currency</th>
+                                    <th>Row Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="deal : ${deals}">
+                                    <td th:text="${deal.isoCurr}" class="mdl-data-table__cell--non-numeric"></td>
+                                    <td th:text="${deal.count}"></td>
+                                   
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class = "mdl-cell mdl-cell--2-col "></div>
+                </div>
+
+
+            </main>
+        </div>
+
+    </body>
+</html>

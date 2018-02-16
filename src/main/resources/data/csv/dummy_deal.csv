@@ -1,0 +1,4 @@
+from_currency_iso_code,to_currency_iso_code,amount
+NGN,USD,2400
+NGN,USD,3500
+NGN,AED,4500

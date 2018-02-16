@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <link rel = "stylesheet" 
+              href = "https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"></link>
+        <script src = "https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js">
+        </script>
+        <link rel = "stylesheet" 
+              href = "https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+
+        <style> 
+            .graybox {
+                background-color:#ddd;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class = "mdl-layout__header">
+                <div class = "mdl-layout__header-row">      
+                    <span class = "mdl-layout-title">Deal Migration Tool</span>          
+                </div>       
+            </header>
+
+            <div class = "mdl-layout__drawer">
+                <span class = "mdl-layout-title">Deal Upload User </span>
+                <nav class = "mdl-navigation">
+                    <a class = "mdl-navigation__link" href = "home">Upload File</a>
+                    <a class = "mdl-navigation__link" href = "viewdeals">Query File</a>  
+                    <a class = "mdl-navigation__link" href = "dealcount"> Deals Count</a> 
+                    <a class = "mdl-navigation__link" href = "deals"> Deals</a> 
+                </nav>
+            </div>
+
+            <main class = "mdl-layout__content">    
+
+                <form method="POST" action="/upload" enctype="multipart/form-data">
+
+
+                    <div class = "mdl-grid">
+                        <div class = "mdl-cell mdl-cell--2-col "></div>
+                        <div class = "mdl-cell mdl-cell--8-col ">
+                            <div style="width:100%; margin-top: 50px" class = "wide-card  mdl-card mdl-shadow--2dp">
+                                <div class = "mdl-card__title">
+                                    <h2 class = "mdl-card__title-text">Deal File Processing </h2>
+                                </div>
+
+                                <div class = "mdl-card__supporting-text">
+                                    <div class="mdl-textfield  mdl-js-textfield">
+                                        <input class="mdl-textfield__input" name="fileName"   type="text" id="username" />
+                                        <label class="mdl-textfield__label"  for="username">File Name</label>
+                                    </div>
+                                    <div class="mdl-textfield  mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="file" name="file" id="userpass" />
+
+                                    </div>
+                                </div>
+
+                                <div class = "mdl-card__actions mdl-card--border">
+
+                                    <input  class = "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value="Upload" />
+                                </div>
+
+                                <div class = "mdl-card__menu">
+                                    <button class = "mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class = "material-icons">share</i></button>
+                                </div>
+                            </div>
+                            <div th:if="${duration}">
+                                <h6 th:text="${duration}"/>
+                            </div>
+                            <div th:if="${message}">
+                                <h6 th:text="${message}"/>
+                            </div>
+                            <div th:if="${validreport}">
+                                <h6 th:text="${validreport}"/>
+                            </div>
+                            <div th:if="${invalidreport}">
+                                <h6 th:text="${invalidreport}"/>
+                            </div>
+
+                        </div>
+                        <div class = "mdl-cell mdl-cell--2-col "></div>
+                    </div>
+
+                </form>
+            </main>
+        </div>
+
+    </body>
+</html>
