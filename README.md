@@ -15,7 +15,7 @@ To Run project simply git clone https://github.com/johnsoneyo/data-generator-plu
 
  modify application.properties to change database schema configuration (spring.datasource.url=jdbc:mysql://localhost:3306/demomigration?autoReconnect=true&useSSL=false)
 - configure the csvGenerationPath to specify where a generated csv file will be dumped
-- configure data-generator plugin to specifiy a start and variance value, by default the 1st 100,000 is configure this way
+- configure data-generator plugin to specifiy a start and variance value, by default the 1st 100,000 is configured this way
 ```plugin 
   <plugin>
                 <groupId>com.bloomberg</groupId>
