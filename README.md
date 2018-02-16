@@ -1,6 +1,12 @@
-# deals-migration
-deals migration task -  tool with angular front end
+deals-migration is a simple project that uploads large records of deals assessment,uploads in few seconds and creates a summary
+and track of successful records and failed or invalid csv row records . It also has an in built plugin that generates a demo
+csv file of assumed illegal records and valid records . It is based of java frameworks as ;
 
-- Migration of a csv file that inserts record in about 5 secs, calculate time used in ingesting data and provisioning report 
-	> First Launch application by going to http:localhost:8080/ on your browser
-	> Use the UI , select a valid csv auto generated for the project in src/resource/data/csv
+```sh
+Spring Boot
+Maven
+Java 8
+Flyway DB (Schema Versioning)
+Log4j2 (Logging)
+
+```
