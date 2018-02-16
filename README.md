@@ -18,7 +18,7 @@ Log4j2 (Logging)
 - First pull the image , docker pull johnson3yo/deal-migration
 - Create Image of mysql:latest  : docker run --name dealdb2 -e MYSQL_ROOT_PASSWORD=freaks03 -e MYSQL_DATABASE=demomigration -e MYSQL_USER=root -e MYSQL_PASSWORD=freaks03 -d mysql:latest
 - Next create an spring container from the image and link to mysql dealdb2 container docker run -p 8085:8080 --name deal-migration --link dealdb2:mysql -d deal-migration
-- Access application on port 8085 :smile
+- Access application on port 8085 :smile:
 
 
 To Run project simply git clone https://github.com/johnsoneyo/data-generator-plugin.git 
