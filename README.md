@@ -14,6 +14,10 @@ Log4j2 (Logging)
 ```
 
 To Run project simply git clone https://github.com/johnsoneyo/data-generator-plugin.git 
+- cd data-generator-plugin
+- mvn clean install
+
+This should install in your local maven repository.
 
  modify application.properties to change database schema configuration (spring.datasource.url=jdbc:mysql://localhost:3306/demomigration?autoReconnect=true&useSSL=false)
 - configure the csvGenerationPath to specify where a generated csv file will be dumped
